@@ -1,5 +1,4 @@
-# Yt-Playlist
-#django
-#hacktober
-#hacktoberfest
-#hacktoberfest2021
+A youtube API based webpage to track deleted videos from playlists
+
+Features to be added
+-
