@@ -1,0 +1,42 @@
+{% extends "play/layout.html" %}
+{% block title%}
+Signup | user
+{% endblock %}
+{% block body %}
+<div id="login-box">
+    <div class="left">
+        <h1>Sign up</h1>
+        <form action="{% url 'signup' %}" method='post'>
+            {% csrf_token %} 
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required/> <span id="user_check">&#9900</span>
+            <input type="text" name="email" placeholder="E-mail" />
+            <input type="password" name="pass1" id="pass1" placeholder="Password" required/><span id="pass1_check">&#9900</span>
+            <input type="password" name="pass2" id="pass2" placeholder="Retype password" required/><span id="pass2_check">&#9900</span>
+            <input type="submit" id="submit" name="signup_submit" value="Sign me up" />
+        </form>
+    </div>
+    <div class="right">
+        <span class="loginwith">Sign in with<br />social network</span>
+        <button class="social-signin facebook">Log in with facebook</button>
+        <button class="social-signin twitter">Log in with Twitter</button>
+        <button class="social-signin google">Log in with Google+</button>
+    </div>
+    <div class="or">OR</div>
+</div>
+<div class="message_text">
+    {% if messages %}
+    <ul id="mssg">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: yellow">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}    
+    <br>
+</div>
+<div class="bottom-text">
+    <!-- <a href="{% url 'login' %}">Login</a> instead  -->
+    <span id="advice">passwords should be same</span>
+    <br>
+    back to <a href="{% url 'index' %}">main page</a>
+</div>
+{% endblock %}
