@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   border: 2px solid #47b2e4;
   font-weight: 600;
-  background: #37517e;
+  background: #37517e !important;
 }
 .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
   color: #fff;
