@@ -24,3 +24,7 @@ Remaining work
 
 Features to be added
 -
+
+
+
+completed project : https://shantanu2k22.pythonanywhere.com/
